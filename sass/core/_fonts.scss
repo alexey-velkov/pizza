@@ -1,0 +1,17 @@
+$file-path: '../fonts/NeuchaRegular/';
+
+@mixin font-face($file-name, $font-name, $weight: normal, $style: normal) { 
+  @font-face {
+    font-family: quote($font-name);
+    src: url($file-path + $file-name + '.eot');
+    src: url($file-path + $file-name + '.eot?#iefix') format('embedded-opentype'),
+         /*url($file-path + $file-name + '.woff2') format('woff2'),*/
+         url($file-path + $file-name + '.woff') format('woff'),
+         url($file-path + $file-name + '.ttf')  format('truetype');
+         /*url($file-path + $file-name + '.svg##{$font-name}')  format('svg');*/
+    font-weight: $weight;
+    font-style: $style;
+  }
+ }
+
+@include font-face($font-neucha-regular, 'NeuchaRegular');

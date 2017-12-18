@@ -1,0 +1,17 @@
+.flex {
+  @include flex(initial, flex-start);
+  flex-wrap: wrap;
+  margin-left: -1rem;
+  margin-right: -1rem;
+  &__item {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    order: 0;
+    min-height: .1rem;
+    flex: 1 1 22rem;
+    &_center {
+      display: flex;
+      align-items: center;
+    }
+  }
+}

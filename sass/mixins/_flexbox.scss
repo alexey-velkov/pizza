@@ -1,0 +1,32 @@
+/* mixin flex */
+@mixin flex($alignItems, $justifyContent, $flexDirection: row, $flexFlow: none) {
+
+    @if $flexDirection==row {
+        flex-direction: row;
+    }
+    else {
+        flex-direction: column;
+    }
+
+    align-items: $alignItems;
+    display: flex;
+    justify-content: $justifyContent;
+    flex-direction: $flexDirection;
+    flex-flow: $flexFlow;
+}
+/* end mixin flex */
+
+/*
+flex used
+
+.flex {
+    @include flex(center, flex-start, row, row wrap);
+}
+*/
+
+
+/* mixin transition */
+@mixin transition($duration: 0.2s, $ease: ease-out) {
+    transition: all $duration $ease;
+}
+/* end mixin transition */
